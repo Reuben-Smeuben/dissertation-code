@@ -1,0 +1,14 @@
+/run/initialize
+
+# To set the type of primary particle to irradiate
+# the cube of water:
+# e-, e+, gamma, neutron, pi0, pi+, proton
+/gun/particle e-
+
+# Initial energy of the primary particles
+/gun/energy 20 MeV
+
+/run/printProgress 100
+
+# Number of particles to be simulated
+/run/beamOn 1000

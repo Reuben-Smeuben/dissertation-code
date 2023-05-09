@@ -1,0 +1,8 @@
+/run/initialize
+
+/gun/particle ion
+/gun/ion 6 12
+/gun/energy 2400 MeV
+
+/run/printProgress 100
+/run/beamOn 10000

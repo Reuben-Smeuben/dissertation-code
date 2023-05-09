@@ -1,0 +1,43 @@
+This application simulates the irradiation of a cube (30*30*50 cm3) of liquid
+water by a beam in a context of external radiotherapy. The monoenergetic source
+of the beam is located at the centre of one of the faces of the cube. Particles
+are emitted along the z-axis.
+
+- Go to the folder that contains the application:
+
+cd YorkMedPhys
+
+- Create a working directory:
+
+mkdir build
+
+- Go to the working directory:
+
+cd build
+
+- Build the Geant4 application:
+
+cmake ..
+
+- Compile the application:
+
+make
+
+The macro particle.mac allows to modify different parameters of the beam: the type
+of particle (gamma, proton, anti_proton, pi-, alpha, anti_alpha, e-, neutron, mu-),
+the energy and the number of particles to be simulated. You can open and edit
+the macro with atom text editor:
+
+atom particle.mac
+
+- Run the code:
+
+./YorkMedPhys -m particle.mac
+
+- Analysis of the results:
+
+root -b analysis.C
+
+- To quit root interactive terminal
+
+.q
